@@ -19,8 +19,7 @@ class _RegitorPageState extends State<RegitorPage> {
   Future<void> getImage() async {
     isImageSelected = false;
     final ImagePicker picker = ImagePicker();
-    XFile? xFile = await picker.pickImage(
-        source: isCamera ? ImageSource.camera : ImageSource.gallery);
+    XFile? xFile = await picker.pickImage(source: isCamera ? ImageSource.camera : ImageSource.gallery);
     if (xFile != null) {
       file = File(xFile.path);
       final directory = await getApplicationDocumentsDirectory();
@@ -59,8 +58,7 @@ class _RegitorPageState extends State<RegitorPage> {
   Future<void> getImagePSc() async {
     isImageSelected = false;
     final ImagePicker picker = ImagePicker();
-    XFile? xFile = await picker.pickImage(
-        source: isCamera ? ImageSource.camera : ImageSource.gallery);
+    XFile? xFile = await picker.pickImage(source: isCamera ? ImageSource.camera : ImageSource.gallery);
     if (xFile != null) {
       file = File(xFile.path);
       final directory = await getApplicationDocumentsDirectory();
@@ -156,8 +154,7 @@ class _RegitorPageState extends State<RegitorPage> {
                                 decoration: const BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      topLeft: Radius.circular(20)),
+                                      topRight: Radius.circular(20), topLeft: Radius.circular(20)),
                                 ),
                                 child: Column(
                                   children: [
@@ -191,8 +188,7 @@ class _RegitorPageState extends State<RegitorPage> {
                       ),
                       const Text(
                         'Name                                                              ',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       TextField(
                         decoration: const InputDecoration(
@@ -202,8 +198,7 @@ class _RegitorPageState extends State<RegitorPage> {
                       ),
                       const Text(
                         'Email                                                                ',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       TextField(
                         decoration: const InputDecoration(
@@ -213,8 +208,7 @@ class _RegitorPageState extends State<RegitorPage> {
                       ),
                       const Text(
                         'Phone Number                                                             ',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       TextField(
                         keyboardType: TextInputType.phone,
@@ -225,8 +219,7 @@ class _RegitorPageState extends State<RegitorPage> {
                       ),
                       const Text(
                         'Confirm Password                                                          ',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       TextField(
                         decoration: InputDecoration(
@@ -241,8 +234,7 @@ class _RegitorPageState extends State<RegitorPage> {
                       ),
                       const Text(
                         'Confirm Password                                                          ',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       TextField(
                         decoration: InputDecoration(
@@ -263,8 +255,7 @@ class _RegitorPageState extends State<RegitorPage> {
                             email: controllerEmail.text.toString(),
                             phoneNumber: controllerPhoneNumber.text.toString(),
                             password: controllerPassword.text.toString(),
-                            confirmPassword:
-                                controllerConfirmPassword.text.toString(),
+                            confirmPassword: controllerConfirmPassword.text.toString(),
                           );
 
                           Navigator.push(
@@ -316,7 +307,5 @@ class User {
 }
 
 ImageProvider<Object>? profileImage({File? file}) {
-  return file != null
-      ? Image.file(file).image
-      : const AssetImage("assets/images/image.png");
+  return file != null ? Image.file(file).image : const AssetImage("assets/images/image.png");
 }

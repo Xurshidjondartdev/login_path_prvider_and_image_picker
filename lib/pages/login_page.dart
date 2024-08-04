@@ -66,8 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     const Text(
                       'Email                                                          ',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     TextField(
                       decoration: const InputDecoration(
@@ -78,8 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 20),
                     const Text(
                       'Password                                                   ',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     TextField(
                       decoration: InputDecoration(
@@ -120,11 +118,8 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         if (controllerEmail.text == user.email.toString() &&
                             controllerPassword.text == user.password.toString()) {
-                          Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>const ProfilePage()),
-                              (route) => false);
+                          Navigator.pushAndRemoveUntil(context,
+                              MaterialPageRoute(builder: (context) => const ProfilePage()), (route) => false);
                         }
                       },
                       minWidth: double.infinity,

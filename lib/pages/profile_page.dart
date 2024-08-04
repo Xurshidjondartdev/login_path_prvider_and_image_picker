@@ -21,8 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Future<void> getImage() async {
     isImageSelected = false;
     final ImagePicker picker = ImagePicker();
-    XFile? xFile = await picker.pickImage(
-        source: isCamera ? ImageSource.camera : ImageSource.gallery);
+    XFile? xFile = await picker.pickImage(source: isCamera ? ImageSource.camera : ImageSource.gallery);
     if (xFile != null) {
       file = File(xFile.path);
       final directory = await getApplicationDocumentsDirectory();
@@ -99,9 +98,8 @@ class _ProfilePageState extends State<ProfilePage> {
                       width: double.infinity,
                       decoration: const BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(20),
-                            topLeft: Radius.circular(20)),
+                        borderRadius:
+                            BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20)),
                       ),
                       child: Column(
                         children: [
@@ -138,8 +136,7 @@ class _ProfilePageState extends State<ProfilePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const EditProfilePage()),
+                  MaterialPageRoute(builder: (context) => const EditProfilePage()),
                 );
               },
               child: const Text(
@@ -285,7 +282,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               Icon(Icons.arrow_forward_ios),
                             ],
                           ),
-                            Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Icon(Icons.wifi),
